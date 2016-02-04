@@ -2,12 +2,13 @@
 
 CMD="docker run \
        --rm \
-       --name valut \
+       --interactive \
+       --tty \
        --net "host" \
-       --user 1000:1000 \
+       --user=$(id -u $(whoami)):$(id -g $(whoami)) \
        --volume $HOME:/home/developer \
        --volume $(pwd):/pwd \
-       kurron/docker-vault:latest"
+       kurron/docker-vault:0.4.1"
 
 #echo $CMD
 eval $CMD $*
