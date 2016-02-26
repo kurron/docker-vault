@@ -2,9 +2,9 @@ FROM ubuntu:14.04
 
 MAINTAINER Ron Kurr <kurr@kurron.org>
 
-LABEL org.kurron.ide.name="Vault" org.kurron.ide.version=0.5.0
+LABEL org.kurron.ide.name="Vault" org.kurron.ide.version=0.5.1
 
-ADD https://releases.hashicorp.com/vault/0.5.0/vault_0.5.0_linux_amd64.zip /tmp/ide.zip
+ADD https://releases.hashicorp.com/vault/0.5.1/vault_0.5.1_linux_amd64.zip /tmp/ide.zip
 
 RUN apt-get update && \
     apt-get install -y unzip ca-certificates && \
