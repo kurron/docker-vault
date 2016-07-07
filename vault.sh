@@ -8,7 +8,7 @@ CMD="docker run \
        --user=$(id -u $(whoami)):$(id -g $(whoami)) \
        --volume $HOME:/home/developer \
        --volume $(pwd):/pwd \
-       kurron/docker-vault:0.5.1"
+       kurron/docker-vault:0.6.0"
 
 #echo $CMD
 eval $CMD $*
